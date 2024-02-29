@@ -2,9 +2,9 @@
 title: "Cpp change vtable"
 date: 2023-07-11T21:35:28+08:00
 draft: false
-tags: []
-slug: ""  # The URL last content: /usr/:1/:2/:slug{or :title}
-mathjax: false
+tags: ['cpp', 'vtable']
+hidemeta: true
+math: false
 ---
 
 [Source code can be found here](https://github.com/jiaoshijie/code_misc/blob/main/c-like/vtables/change_vtable.cpp)

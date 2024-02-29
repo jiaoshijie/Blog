@@ -2,9 +2,9 @@
 title: "Inspect cpp vtables using gdb"
 date: 2023-07-09T21:18:46+08:00
 draft: false
-tags: []
-slug: "inspect_cpp_vtables_using_gdb"  # The URL last content: /usr/:1/:2/:slug{or :title}
-mathjax: false
+tags: ['cpp', 'vtable']
+hidemeta: true
+math: false
 ---
 
 [Source code can be found here(文章中的源代码)](https://github.com/jiaoshijie/code_misc/tree/main/c-like/vtables)

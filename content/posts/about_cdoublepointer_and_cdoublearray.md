@@ -3,7 +3,8 @@ title: "关于C二维数组, 二重指针, 指针数组的内存布局"
 date: 2020-05-13T23:00:33+08:00
 draft: false
 tags: ["c"]
-slug: ""
+hidemeta: true
+math: false
 ---
 
 ## 开始

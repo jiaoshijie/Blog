@@ -2,8 +2,9 @@
 title: "Tinyhttpd学习"
 date: 2019-10-13T22:46:48+08:00
 draft: false
-tags: ['c', 'coding']
-slug: "tinyhttpd_learn"
+tags: ['c', 'http']
+hidemeta: true
+math: false
 ---
 
 ## Introduction

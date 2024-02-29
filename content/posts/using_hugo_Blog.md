@@ -16,7 +16,7 @@ slug: "using_hugo_Blog"
 
 ## 3. 下载[hugo主题](https://themes.gohugo.io/)
   - 到项目的根目录下, 即MyBlog文件夹下
-  - `git clone https://github.com/LukeSmithxyz/lugo.git themes/lugo`
+  - `git clone <github url> themes/<theme name>`
 
   一般主题下面都有一个 *exampleSite/config.toml* 文件是这个主题的默认配置可以copy到该项目的根目录, 然后在修改一下.
 

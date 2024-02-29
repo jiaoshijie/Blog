@@ -3,8 +3,9 @@ title: "00 编译器简介"
 date: 2022-07-17T14:57:04+08:00
 draft: false
 tags: ["compiler"]
-slug: "compiler_introduction"  # The URL last content: /usr/:1/:2/:slug{or :title}
-mathjax: false
+categories: "compiler"
+hidemeta: true
+math: false
 ---
 
 ## 1 语言处理器(language processor)
@@ -17,13 +18,13 @@ language processor可以分为两种, 一种是编译器(compiler), 一种是解
 
 **解释器(interpreter)** 是另一类的language processor, 它不会将高级语言编译成low-level语言来执行, 而是直接执行该高级语言.
 
-![Figure: A interpreter](/images/compiler/00_aInterpreter.png)
+![Figure: A interpreter](/images/compiler/00_aInterpreter.png#center)
 
 通常来说, 编译型语言要比解释型语言运行快, 但解释型语言可以更好的检查错误, 因为很多runtime error在编译期很难检测出来.
 
 接下来主要以编译器为主进行介绍, 首先看一下编译器在编译一个文件时的流程图.
 
-![Figure: A Language-processing system](/images/compiler/00_aLanguageProcessingSystem.png)
+![Figure: A Language-processing system](/images/compiler/00_aLanguageProcessingSystem.png#center)
 
 根据上图可以看出编译器在将源程序编译目标程序时是分步骤完成的:
 1. 预处理(preprocess)
@@ -50,7 +51,7 @@ language processor可以分为两种, 一种是编译器(compiler), 一种是解
 
 如果更加深入地划分编译器, 那么可以被划分为更多的阶段, 下图展示了一个比较经典的划分.
 
-![Figure: Phases of a compiler](/images/compiler/00_phasesOfACompiler.png)
+![Figure: Phases of a compiler](/images/compiler/00_phasesOfACompiler.png#center)
 
 ### 2.1 Lexical Analysis(scanning)
 
@@ -83,7 +84,7 @@ parser使用上一阶段生成的tokens来生成一个语法树. 这个树的中
 
 上面那个赋值操作生成的语法树就像下图这样.
 
-![Figure: Syntax tree](/images/compiler/00_syntaxTree.png)
+![Figure: Syntax tree](/images/compiler/00_syntaxTree.png#center)
 
 ### 2.3 Semantic Analysis
 
@@ -95,7 +96,7 @@ Semantic analysis的一个重要部分就是**类型检查**, 检查操作数是
 
 上面那个赋值操作经过Semantic analyzer后就是下图.
 
-![Figure: Semantic analysis](/images/compiler/00_semanticAnalysis.png)
+![Figure: Semantic analysis](/images/compiler/00_semanticAnalysis.png#center)
 
 `inttofloat` 表示把60转化为floating-number.
 
@@ -112,7 +113,7 @@ Semantic analysis的一个重要部分就是**类型检查**, 检查操作数是
 
 下面是赋值操作使用three-address instruction表示的中间代码.
 
-![Figure: Three-address instruction](/images/compiler/00_threeAddressInstuction.png)
+![Figure: Three-address instruction](/images/compiler/00_threeAddressInstuction.png#center)
 
 Three-address instruction也有三个不足的地方:
 
@@ -126,7 +127,7 @@ Three-address instruction也有三个不足的地方:
 
 下面是对上一阶段的优化的结果.
 
-![Figure: Code optimization](/images/compiler/00_codeOptimzation.png)
+![Figure: Code optimization](/images/compiler/00_codeOptimzation.png#center)
 
 现代编译器在编译程序时有大量的时间是花费在这个阶段的. 代码优化的原则是能够显著地提高程序的运行效率又不会使编译时间太长. 当然, 最重要的还是目标程序和源程序结果要一致.
 
@@ -136,13 +137,13 @@ Three-address instruction也有三个不足的地方:
 
 下面是生成的汇编语言.
 
-![Figure: Code generation](/images/compiler/00_targetCodeGeneration.png)
+![Figure: Code generation](/images/compiler/00_targetCodeGeneration.png#center)
 
 上面生成的代码有一个很重要的问题没有表现出来就是**空间分配(Storage Allocation)**. 空间分配可以在中间代码生成是处理也可以在目标代码生成时处理, 这些将在后面介绍.
 
 接下来看一些编译器的完整流程图.
 
-![Figure: Translation of an assignment statement](/images/compiler/00_translationOfAnAssignmentStatement.png)
+![Figure: Translation of an assignment statement](/images/compiler/00_translationOfAnAssignmentStatement.png#center)
 
 ### 2.7 compiler-construction tools
 

@@ -3,8 +3,8 @@ title: "Colors of Balls Problem"
 date: 2022-04-20T13:37:58+08:00
 draft: false
 tags: ["math"]
-slug: "Colors_of_balls_problem"
-mathjax: true
+hidemeta: true
+math: true
 ---
 
 n balls with N different colors, number of balls with each color is same, randomly choose k balls from the n balls, the expected number of colors of the k balls can be estimated as:

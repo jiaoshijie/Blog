@@ -3,7 +3,8 @@ title: "关于数组array和&array地址相同问题"
 date: 2020-05-17T16:28:28+08:00
 draft: false
 tags: ['c']
-slug: ""
+hidemeta: true
+math: false
 ---
 
 ## 开始

@@ -1,9 +1,117 @@
 baseURL = "https://jiaoshijie.github.io/"
+publishDir = "/home/jsj/Downloads/Site"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
-title = "Blog"
+
+title = "Jsj's Blog"
+paginate = 5
 theme = "PaperMod"
-publishDir = "/home/jsj/Downloads/Site"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+googleAnalytics = "UA-123-45"
+pygmentsUseClasses = true
+
+[minify]
+disableXML = true
+minifyOutput = true
 
 [params]
+env = "production"
+title = "Jsj's Blog"
+description = "Jiao shijie's blog"
+keywords = [ "C", "C++", "Rust", "Linux", "Arch", "Neovim", "Vim" ]
+author = "Jiao shijie"
+# images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "January 2, 2006"
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = false
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+
+[params.assets]
 favicon = "/favicon.ico"
+favicon16x16 = "/favicon.ico"
+favicon32x32 = "/favicon.ico"
+apple_touch_icon = "/favicon.ico"
+safari_pinned_tab = "/favicon.ico"
+
+[params.label]
+text = "Home"
+icon = "/favicon.ico"
+iconHeight = 35
+
+[params.profileMode]
+enabled = false
+
+[params.homeInfoParams]
+Title = "Hi there 👋"
+Content = "Welcome to my blog"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/jiaoshijie"
+
+[[params.socialIcons]]
+name = "gitlab"
+url = "https://gitlab.com/jiaoshijie"
+
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
+
+[params.analytics.bing]
+SiteVerificationTag = "XYZabc"
+
+[params.analytics.yandex]
+SiteVerificationTag = "XYZabc"
+
+[params.cover]
+hidden = true
+hiddenInList = true
+hiddenInSingle = true
+
+[params.editPost]
+URL = "https://github.com/jiaoshijie/Blog"
+Text = "Suggest Changes"
+appendFilePath = true
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1_000
+threshold = 0.4
+minMatchCharLength = 0
+limit = 10
+keys = [ "title", "permalink", "summary", "content" ]
+
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 20
+
+[markup.highlight]
+noClasses = false
+
+
