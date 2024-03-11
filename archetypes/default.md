@@ -4,7 +4,7 @@ date: {{ .Date }}
 tags: [""]
 categories: ""
 author: "Jiao shijie"
-draft: false
+draft: true
 hidemeta: true
 math: false
 ---
