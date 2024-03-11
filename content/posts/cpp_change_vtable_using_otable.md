@@ -1,15 +1,16 @@
 ---
-title: "Cpp change vtable"
+title: "c++ 使用函数指针结构体改变类的虚函数表"
 date: 2023-07-11T21:35:28+08:00
 draft: false
-tags: ['cpp', 'vtable']
+tags: ['c++', 'vtable']
 hidemeta: true
 math: false
 ---
 
-[Source code can be found here](https://github.com/jiaoshijie/code_misc/blob/main/c-like/vtables/change_vtable.cpp)
+[文中代码](https://github.com/jiaoshijie/code_misc/blob/main/c-like/vtables/change_vtable.cpp)
 
-如果c++的类有虚函数那么这个类的实例对象就会有一个虚表. 我们可以通过一下代码来改变虚表.
+如果c++的类有虚函数那么这个类的实例对象就会有一个虚表. 我们可以通过一下代码来
+改变虚表.
 
 ```cpp
 #include <cstring>
@@ -77,9 +78,15 @@ int main(void) {
 
 ![cpp change vtable 01](../../images/cpp_change_vtable_01.png)
 
-但是运行上面的代码可以发现在`memcpy(ptr, &ovt, sizeof(void *));`之后, `a->vfoo_1()`的输出是预期的输出, 但是`a->vfoo_2(10)`和`a->vfoo_3(2, 5)`部分的代码输出却很怪异.
+但是运行上面的代码可以发现在 `memcpy(ptr, &ovt, sizeof(void *));` 之后,
+`a->vfoo_1()`的输出是预期的输出, 但是`a->vfoo_2(10)`和`a->vfoo_3(2, 5)`部分
+的代码输出却很怪异.
 
-这是因为编译这段代码时我们是以method的方式来执行这个函数的因此编译器除了将参数入栈外还会将this这个指针入栈(在参数之前入栈), 而我们执行的确实function因此函数会将this指针当作第一个参数, 将传入的第一个参数作为第二个参数(如果有的话), 所以可以看到`g_f2()`中的`((A *)a)->vfoo_1();`这行代码可以正常执行, `g_f3()`中返回值为20.
+这是因为编译这段代码时我们是以 method 的方式来执行这个函数的因此编译器除了将
+参数入栈外还会将 this 这个指针入栈(在参数之前入栈), 而我们执行的确实 function
+因此函数会将 this 指针当作第一个参数, 将传入的第一个参数作为第二个参数(如果有的话),
+所以可以看到 `g_f2()` 中的 `((A *)a)->vfoo_1();` 这行代码可以正常执行, `g_f3()`
+中返回值为20.
 
 具体细节可以在[这个网站](https://godbolt.org/z/df3TTdjGj)查看汇编代码.
 

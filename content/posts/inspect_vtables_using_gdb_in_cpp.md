@@ -1,13 +1,13 @@
 ---
-title: "Inspect cpp vtables using gdb"
+title: "使用 gdb 查看 c++ 中的虚函数表"
 date: 2023-07-09T21:18:46+08:00
 draft: false
-tags: ['cpp', 'vtable']
+tags: ['c++', 'vtable']
 hidemeta: true
 math: false
 ---
 
-[Source code can be found here(文章中的源代码)](https://github.com/jiaoshijie/code_misc/tree/main/c-like/vtables)
+[文中代码](https://github.com/jiaoshijie/code_misc/tree/main/c-like/vtables)
 
 ## 1. 使用`info vtbl obj`查看vtable
 
