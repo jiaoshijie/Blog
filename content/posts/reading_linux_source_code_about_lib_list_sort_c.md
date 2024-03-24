@@ -4,7 +4,7 @@ date: 2024-03-23T14:33:19+08:00
 tags: ["linux", "c"]
 categories: ""
 author: "Jiao shijie"
-draft: true
+draft: false
 hidemeta: true
 math: true
 ---
