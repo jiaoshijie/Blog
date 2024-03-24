@@ -1,0 +1,27 @@
+table th {
+  font-weight: 600;
+}
+
+table th,
+table td {
+  padding: 6px 13px;
+  border: 1px solid var(--border);
+}
+
+table td>:last-child {
+  margin-bottom: 0;
+}
+
+table tr {
+  font-size: 90%;
+  background-color: var(--theme);
+  border-top: 1px solid hsla(210,18%,87%,1);
+}
+
+table tr:nth-child(2n) {
+  background-color: var(--code-bg);
+}
+
+table img {
+  background-color: transparent;
+}
