@@ -4,7 +4,7 @@ date: 2024-04-17T11:36:45+08:00
 tags: ["c"]
 categories: ""
 author: "Jiao shijie"
-draft: true
+draft: false
 hidemeta: true
 math: false
 ---
