@@ -32,7 +32,7 @@ math: false
 | `^` `$`       | the start and the end of the line, **it's only used at the beginning or end of a line**                             |
 | `()`          | match groups                                                                                                        |
 | `(())`        | nested groups                                                                                                       |
-| `(|)`         | to denote different possible sets of characters                                                                     |
+| `(\|)`        | to denote different possible sets of characters                                                                     |
 | `\b`          | to match the boundary between a word and a non-word character                                                       |
 
 ## Details
