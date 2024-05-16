@@ -196,7 +196,7 @@ fdisk$ q # 取消修改退出
   + `sudo systemctl unmask systemd-rfkill.service`
   + `sudo systemctl unmask systemd-rfkill.socket`
 
-### 5. 下载 32 位的程序
+### 5. 下载 32 位的程序及添加 Chaotic-AUR(将AUR中的包编译成二进制下载)
 
 修改 `vim /etc/pacman.conf`, 取消注释
 
@@ -204,6 +204,8 @@ fdisk$ q # 取消修改退出
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
+
+- [添加 Chaotic-AUR 仓库](https://aur.chaotic.cx/)
 
 ### 6. 设置 DNS
 
