@@ -186,3 +186,18 @@ Include = /etc/pacman.d/mirrorlist
 
 - `sudo apt remove gnome-shell-extension-desktop-icons-ng -y`
 - ref: [How disable show folder in desktop ubuntu?](https://askubuntu.com/questions/1407605/how-disable-show-folder-in-desktop-ubuntu)
+
+## VirtualBox
+
+### Arch Linux Install
+
+- `pacman -S virtualbox`
+  * 使用`virtualbox-host-modules-arch`内核依赖
+- 创建虚拟机有问题就重新加载内核执行命令 `sudo vboxreload`
+- [ ] Install extpack
+  * download the extension manually
+  * `sudo VBoxManage extpack install <.vbox-extpack>`
+
+### VirtualBox in windows 11 are so slow
+
+- [fix-virtualbox-running-very-slow-in-windows-10-11](https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/)
