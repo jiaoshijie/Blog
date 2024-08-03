@@ -1,7 +1,7 @@
 ---
-title: "Ctags_usage"
+title: "Ctags Usage"
 date: 2024-08-04T00:18:07+08:00
-tags: [""]
+tags: ["linux", "vim", "programming"]
 categories: ""
 author: "Jiao shijie"
 draft: false
