@@ -74,3 +74,47 @@ math: false
 - `paru -Gp <target>` 打印target的PKGBUILD的内容
 - `paru -Gc <target>` 打印target的AUR的comments
 - `paru --gendb` 创建devel database
+
+## Archlinux install deb package
+
+
+### 1. 使用AUR中其他人提供的包
+
+- using AUR(Arch Linux User Repository)
+
+### 2. 手动安装
+
+- 首先, 解压下载的 `*.deb` 包, `ar -x *.deb --output dirname`
+- `cd dirname` 应该可以看到 `control.tar.gz` `data.tar.xz` `debian-binary`
+  * `debian-binary` 显示debian包管理的信息版本(super不重要)
+  * `control.tar.xz` 为软件介绍(包括依赖**非常重要**), 一些包的安全验证程序和完整性的验证程序(可以不用管)
+  * `data.tar.xz` 软件安装的位置及**软件**, 可能是 `etc` `opt` `usr`
+- 然后根据依赖信息安装依赖, 根据data中目录的位置将相应的软件拷贝到相应的目录.
+
+### 3. 自己写arch's makepkg file.
+
+- 首先, 通过`cp /usr/share/pacman/PKGBUILD.proto ./PKGBUILD`拷贝一个PKGBUILD模板.
+- 然后, 设置PKGBUILD中的变量和函数的功能.
+  - `pkgname`: 软件包的名称
+  - `pkgver`: 软件包的版本, 通常为`数字`, `. _ -`组成
+  - `pkgrel`: 必须存在, 并设置为1
+  - `pkgdesc`: 软件的描述
+  - `arch`: 可以运行的平台, 一般为`x86_64`
+  - `url`: 下载该软件的地址
+  - `license`: 发行协议
+  - `depends`: 软件的依赖
+  - `source`: 构建包所需要的文件组, 如果只有一个可以写一个, 也可以使很多包的地址
+  - `noextract`: 一个文件组在`source`中的没有解压缩包的名称
+  - `md5sums`: 包检验码, `md5sums`生成md5sums码, 如果不想使用可以复制为`SKIP`
+  - `package()`: 最终安装函数
+  - `prepare()`: 准备函数
+  - 更多变量解释: [archwiki-PKGBUILD](https://wiki.archlinux.org/index.php/PKGBUILD)
+- `pkgdir`: makepkg生成的目录默认为根目录. `srcdir`: **还不清楚**.
+- 设置完成后, 在包含该PKGBUILD的目录下, 执行`makepkg`即可生成archlinux下的包.
+- 使用`pacman -U pkgname`安装该软件.
+
+### 参考
+
+- [How to install Deb package in arch Linux](https://www.maketecheasier.com/install-deb-package-in-arch-linux/)
+- [How to convert DEB packages into arch linux packages](https://www.ostechnix.com/convert-deb-packages-arch-linux-packages/)
+- [Archlinux-Creating packages](https://wiki.archlinux.org/index.php/Creating_packages)
