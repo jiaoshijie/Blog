@@ -11,6 +11,8 @@ math: false
 
 # Linux Little Tricks
 
+- [data model LLP64 and LP64](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models)
+
 ## 搜索引擎小技巧
 
 - `cats and dogs` Result about cats or dogs
@@ -127,7 +129,8 @@ Include = /etc/pacman.d/mirrorlist
 
 ## 使用 cronie 设置定时任务
 
-- [scheduling-cron-jobs-with-crontab](https://linuxize.com/post/scheduling-cron-jobs-with-crontab/)
+- [scheduling cron jobs with crontab](https://linuxize.com/post/scheduling-cron-jobs-with-crontab/)
+- [Understanding Crontab in Linux With Examples](https://linuxhandbook.com/crontab/)
 
 ## tmux 使用 ssh 连接，断开连接后 tmux session 也会关闭的问题
 
@@ -173,3 +176,13 @@ Include = /etc/pacman.d/mirrorlist
 
 - use `Xephyr :1` to start a new DISPLAY server
 - use `DISPLAY=:1 {gui_command}` to start `gui_command` in the new server
+
+## ubuntu using x11 instead of wayland
+
+- `vim /etc/gdm3/custom.conf`
+- uncomment this line `#WaylandEnable=false`
+
+## ubuntu disable showing icons in desktop
+
+- `sudo apt remove gnome-shell-extension-desktop-icons-ng -y`
+- ref: [How disable show folder in desktop ubuntu?](https://askubuntu.com/questions/1407605/how-disable-show-folder-in-desktop-ubuntu)
