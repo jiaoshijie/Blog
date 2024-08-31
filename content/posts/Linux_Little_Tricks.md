@@ -205,6 +205,7 @@ Include = /etc/pacman.d/mirrorlist
 ### `<` `<<` `<<<` `<()`
 
 - [input redirections explation](https://linuxhandbook.com/here-input-redirections/?ref=lhb-linux-digest-newsletter)
+- [bash process substitution](https://linuxhandbook.com/bash-process-substitution/)
 - [gnu redirections](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
 
 - `<`: The input redirection `cat < README.md`
