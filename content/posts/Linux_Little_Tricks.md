@@ -201,3 +201,13 @@ Include = /etc/pacman.d/mirrorlist
 ### VirtualBox in windows 11 are so slow
 
 - [fix-virtualbox-running-very-slow-in-windows-10-11](https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/)
+
+### `<` `<<` `<<<` `<()`
+
+- [input redirections explation](https://linuxhandbook.com/here-input-redirections/?ref=lhb-linux-digest-newsletter)
+- [gnu redirections](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+
+- `<`: The input redirection `cat < README.md`
+- `<<`: The here document `cat > output.txt <<EOF` the EOF is an DELIMITER, when stdin recives the DELIMITER, the stdin will close
+- `<<<`: The here string `cat <<< "Demo text"` input one line of stings to a script or a command.
+- `<()`: redirection command output to another command `cat <(echo "Demo text")`
