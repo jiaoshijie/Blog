@@ -212,3 +212,11 @@ Include = /etc/pacman.d/mirrorlist
 - `<<`: The here document `cat > output.txt <<EOF` the EOF is an DELIMITER, when stdin recives the DELIMITER, the stdin will close
 - `<<<`: The here string `cat <<< "Demo text"` input one line of stings to a script or a command.
 - `<()`: redirection command output to another command `cat <(echo "Demo text")`
+
+### login-shell and non-login-shell
+
+- login-shell does not source .*rc(.bashrc for bash) file, only source profile(.bash_profile for bash)
+
+- [login-shell](https://linuxhandbook.com/login-shell/)
+- [why-a-login-shell-over-a-non-login-shell](https://unix.stackexchange.com/questions/324359/why-a-login-shell-over-a-non-login-shell)
+- [interactive-non-interactive-login-non-login-shells](https://www.baeldung.com/linux/interactive-non-interactive-login-non-login-shells)
