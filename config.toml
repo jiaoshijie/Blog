@@ -1,5 +1,5 @@
 baseURL = "https://jiaoshijie.github.io/"
-publishDir = "/home/jsj/Downloads/Site"
+publishDir = "/home/jsj/Site"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
 

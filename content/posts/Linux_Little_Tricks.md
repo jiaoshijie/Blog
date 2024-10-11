@@ -202,7 +202,7 @@ Include = /etc/pacman.d/mirrorlist
 
 - [fix-virtualbox-running-very-slow-in-windows-10-11](https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/)
 
-### `<` `<<` `<<<` `<()`
+## `<` `<<` `<<<` `<()`
 
 - [input redirections explation](https://linuxhandbook.com/here-input-redirections/?ref=lhb-linux-digest-newsletter)
 - [bash process substitution](https://linuxhandbook.com/bash-process-substitution/)
@@ -213,10 +213,15 @@ Include = /etc/pacman.d/mirrorlist
 - `<<<`: The here string `cat <<< "Demo text"` input one line of stings to a script or a command.
 - `<()`: redirection command output to another command `cat <(echo "Demo text")`
 
-### login-shell and non-login-shell
+## login-shell and non-login-shell
 
 - login-shell does not source .*rc(.bashrc for bash) file, only source profile(.bash_profile for bash)
 
 - [login-shell](https://linuxhandbook.com/login-shell/)
 - [why-a-login-shell-over-a-non-login-shell](https://unix.stackexchange.com/questions/324359/why-a-login-shell-over-a-non-login-shell)
 - [interactive-non-interactive-login-non-login-shells](https://www.baeldung.com/linux/interactive-non-interactive-login-non-login-shells)
+
+## voidlinux fix ugly font display
+
+- `sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/`
+- [firefox_ugly_fonts](https://www.reddit.com/r/voidlinux/comments/izm3xb/firefox_ugly_fonts/)

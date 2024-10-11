@@ -266,7 +266,6 @@ nameserver 2001:4860:4860::8844
 #### 英文字体
 
 - [X] `ttf-linux-libertine ttf-dejavu ttf-ubuntu-font-family noto-fonts`
-- [ ] `noto-fonts-extra`
 
 #### 中文字体
 
@@ -276,8 +275,7 @@ nameserver 2001:4860:4860::8844
 #### 等宽字体
 
 - [programming fonts review](https://www.programmingfonts.org/)
-- [X] programming ligatures: `ttf-jetbrains-mono` `ttf-cascadia-code` `ttf-monaspace-variable`
-- [X] `adobe-source-code-pro-fonts` `ttf-hack`
+- [X] `adobe-source-code-pro-fonts` `ttf-hack` `ttf-monaspace-variable`
 
 #### 图标字体
 
