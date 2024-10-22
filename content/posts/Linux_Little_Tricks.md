@@ -225,3 +225,8 @@ Include = /etc/pacman.d/mirrorlist
 
 - `sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/`
 - [firefox_ugly_fonts](https://www.reddit.com/r/voidlinux/comments/izm3xb/firefox_ugly_fonts/)
+
+## raspberry pi 4 & 5 unable to connect to hidden wifi network
+
+If you have tried almost all of the methods that other people says, but also didn't work for you, try to set the WLAN localization properly.
+Using `raspi-config` is a simple way to set localization.
