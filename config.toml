@@ -42,6 +42,7 @@ hidemeta = false
 hideSummary = false
 showtoc = false
 tocopen = false
+social = true
 
 [params.assets]
 favicon = "/favicon.ico"
@@ -113,5 +114,3 @@ weight = 20
 
 [markup.highlight]
 noClasses = false
-
-
