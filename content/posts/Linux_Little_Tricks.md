@@ -229,4 +229,4 @@ Include = /etc/pacman.d/mirrorlist
 ## raspberry pi 4 & 5 unable to connect to hidden wifi network
 
 If you have tried almost all of the methods that other people says, but also didn't work for you, try to set the WLAN localization properly.
-Using `raspi-config` is a simple way to set localization.
+Using [raspi-config](https://www.raspberrypi.com/documentation/computers/configuration.html#localisation-options) is a simple way to set localization.
