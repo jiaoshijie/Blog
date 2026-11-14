@@ -1,6 +1,6 @@
-baseURL = "https://jiaoshijie.github.io/"
-publishDir = "/home/jsj/Site"
-languageCode = "zh-cn"
+baseURL = "https://hahamaker.top/"
+publishDir = "/var/www/hahamaker/"
+locale = "zh-cn"
 defaultContentLanguage = "zh-cn"
 
 title = "Jsj's Blog"
@@ -9,11 +9,13 @@ enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-googleAnalytics = "UA-123-45"
 pygmentsUseClasses = true
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [pagination]
-  pagerSize = 5
+pagerSize = 5
 
 [minify]
 disableXML = true
