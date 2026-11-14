@@ -71,10 +71,6 @@ Content = "Welcome to my blog"
 name = "github"
 url = "https://github.com/jiaoshijie"
 
-[[params.socialIcons]]
-name = "gitlab"
-url = "https://gitlab.com/jiaoshijie"
-
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
 
